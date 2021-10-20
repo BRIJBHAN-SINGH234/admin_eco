@@ -3,7 +3,7 @@
 <!-- icons -->
 <link href="{{asset('assets/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
 
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
 @if(isset($mode) && $mode == 'rtl')
 
 <!-- App css -->

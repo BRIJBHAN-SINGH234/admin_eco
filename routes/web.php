@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoutingController;
-
+use App\Http\Controllers\admincontroll;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +17,8 @@ use App\Http\Controllers\RoutingController;
 
 Route::get('/home', function () {
     return view('index');
-})->middleware('auth')->name('home');
+})
+->middleware('auth')->name('home');
 
 require __DIR__ . '/auth.php';
 
@@ -27,3 +28,6 @@ Route::group(['prefix' => '/'], function () {
     Route::get('{first}/{second}', [RoutingController::class, 'secondLevel'])->name('second');
     Route::get('{any}', [RoutingController::class, 'root'])->name('any');
 });
+Route:: get("user",[admincontroll:: class ,"user_signup"] );
+Route:: view('signin_signup','signin_signup');
+Route:: get("logi",[admincontroll:: class ,"user_signin"] );

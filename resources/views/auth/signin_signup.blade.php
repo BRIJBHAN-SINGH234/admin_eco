@@ -3,8 +3,8 @@
 
 <head>
 
-    @include('layouts.shared/title-meta', ['title' => "Auth Pages | Create Account | Sign In"])
-    @include('layouts.shared/head-css', ["mode" => $mode ?? '', "demo" => $demo ?? ''])
+    <!-- @include('layouts.shared/title-meta', ['title' => "Auth Pages | Create Account | Sign In"])
+    @include('layouts.shared/head-css', ["mode" => $mode ?? '', "demo" => $demo ?? '']) -->
 
 </head>
 
@@ -40,7 +40,7 @@
                                         <!-- title-->
                                         <h4 class="mt-0">Sign In</h4>
                                         <p class="text-muted mb-4">Enter your email address and password to access account.</p>
-                                        <form action="#">
+                                     <form action="user" method="GET">
                                             <div class="mb-3">
                                                 <label for="emailaddress" class="form-label">Email address</label>
                                                 <input class="form-control" type="email" id="emailaddress" required="" placeholder="Enter your email">
